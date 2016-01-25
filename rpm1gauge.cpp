@@ -78,7 +78,7 @@ void rpm1gauge::setupRealtimeDataDemo(QCustomPlot *customPlot)
 
   connect(&dataTimer, SIGNAL(timeout()), this, SLOT(realtimeDataSlot()));           //runs rtds function every 300 ms
 
-  dataTimer.start(100);
+  dataTimer.start(1000);
 }
 
 void rpm1gauge::realtimeDataSlot()

@@ -412,7 +412,7 @@ void MainWindow::requestData()
 {
     blockSize = 0;
     tcpSocket->abort();
-    tcpSocket->connectToHost("10.121.220.244"/*"localhost"*/, 1455);                               //specific network
+    tcpSocket->connectToHost("10.121.231.206"/*"localhost"*/, 1455);                               //specific network
 }
 
 void MainWindow::readData()
@@ -430,7 +430,7 @@ void MainWindow::readData()
     QString data;
     in >> data;
 
-    qDebug() << data;
+    //qDebug() << data;
 
     QRegExp rx("[| ]");// match a comma or a space
     QStringList list = data.split(rx, QString::SkipEmptyParts);
